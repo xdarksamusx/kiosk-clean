@@ -7,10 +7,10 @@ import { BookingProvider } from "./context/BookingContext";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <BookingProvider>
+    <BookingProvider>
+      <BrowserRouter>
         <App />
-      </BookingProvider>
-    </BrowserRouter>
+      </BrowserRouter>
+    </BookingProvider>
   </React.StrictMode>
 );
