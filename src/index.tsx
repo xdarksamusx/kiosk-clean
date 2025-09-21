@@ -1,13 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import App from "./App"; // ← restore this
-import "./index.css"; // ← keep this (Tailwind lives here)
+import App from "./App";
+import "./index.css";
+import { BookingProvider } from "./context/BookingContext";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <BookingProvider>
+        <App />
+      </BookingProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
