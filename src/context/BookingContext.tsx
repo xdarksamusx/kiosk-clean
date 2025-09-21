@@ -43,6 +43,8 @@ export function BookingProvider({ children }: { children: React.ReactNode }) {
   const getMissing = () =>
     (["service", "weight", "date"] as const).filter((k) => !state[k]);
 
+  console.log("[BookingProvider] mounted");
+
   return (
     <BookingContext.Provider value={{ state, setField, reset, getMissing }}>
       {children}
