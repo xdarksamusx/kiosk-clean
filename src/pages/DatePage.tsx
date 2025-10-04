@@ -36,8 +36,8 @@ export const DatePage = () => {
             <p className="mt-4 text-center text-sm">{footer}</p>
           </div>
           <div className="mt-6 w-full flex justify-between">
-            <LeftArrow to="/options" />
-            <RightArrow to="/weight" />
+            <LeftArrow to="/" />
+            <RightArrow to="/time" />
           </div>
         </div>
       </div>

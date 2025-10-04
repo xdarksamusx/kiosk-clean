@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { RightArrow } from "../components/RightArrow";
 import { LeftArrow } from "../components/LeftArrow";
+import { useBooking } from "../context/BookingContext";
 
 export const ServiceOptionsPage = () => {
   const [shipping, setShipping] = useState("domestic");
+  const { setField } = useBooking();
 
   return (
     <div className="min-h-screen flex items-center justify-center">
@@ -17,7 +19,12 @@ export const ServiceOptionsPage = () => {
 
           <div className="amount">Amount: $23.54</div>
 
-          <button className="rounded-md w-24 bg-green-400">Buy Now</button>
+          <button
+            onClick={() => setField({ service: "domestic" })}
+            className="rounded-md w-24 bg-green-400"
+          >
+            Buy Now
+          </button>
         </div>
 
         <div className="w-full flex items-center justify-between">

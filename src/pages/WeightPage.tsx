@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
 import { RightArrow } from "../components/RightArrow";
 import { LeftArrow } from "../components/LeftArrow";
+import { quoteCents } from "../utils/pricing";
+import { useBooking } from "../context/BookingContext";
 
 export const WeightPage = () => {
+  const { state, setField } = useBooking();
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center">
       <div className="w-full max-w-[420px] px-4 flex flex-col">
-        {/* CARD */}
         <div className="w-full rounded-2xl bg-[#e9e9ea] p-8 md:p-10 text-center shadow-lg space-y-10">
           <h4 className="header">Weigh your box</h4>
           <div>
@@ -24,9 +27,8 @@ export const WeightPage = () => {
           </div>
         </div>
 
-        {/* ARROWS (same width as card) */}
         <div className="mt-6 w-full flex justify-between">
-          <LeftArrow to="/date" />
+          <LeftArrow to="/time" />
           <RightArrow to="/options" />
         </div>
       </div>
