@@ -14,13 +14,14 @@ const initial: BookingState = {
   service: null,
   weight: null,
   date: null,
+  time: null,
+  amountCents: null,
   confirmation: null,
 };
 
 const BookingContext = createContext<Ctx | null>(null);
 
 export function BookingProvider({ children }: { children: React.ReactNode }) {
-  // lazy init from localStorage
   const [state, setState] = useState<BookingState>(() => {
     try {
       const raw = localStorage.getItem(KEY);
